@@ -1,25 +1,26 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import CategoryCard from "../components/CategoryCard.astro";
+import { sitePath } from "../scripts/site-path";
 
 const entries = [
   {
     title: "世界地理探索",
     description:
       "從大陸、海洋、氣候到地形，沿著地理百科認識世界各地。",
-    href: "/encyclopedia/",
+    href: sitePath("/encyclopedia/"),
     linkLabel: "進入地理百科",
   },
   {
     title: "美國 50 州",
     description: "查看五十州的名稱、簡稱、首府與地理區域。",
-    href: "/states/",
+    href: sitePath("/states/"),
     linkLabel: "查看各州",
   },
   {
     title: "互動測驗",
     description: "玩 50 States Challenge，在美國地圖上找出全部五十州。",
-    href: "/quiz/",
+    href: sitePath("/quiz/"),
     linkLabel: "開始測驗",
   },
 ];
@@ -91,7 +92,7 @@ const featuredArticles = [
           <CategoryCard
             title={article.title}
             description={article.description}
-            href="/encyclopedia/"
+            href={sitePath("/encyclopedia/")}
             linkLabel="前往百科"
           />
         ))

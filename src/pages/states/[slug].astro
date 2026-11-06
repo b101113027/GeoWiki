@@ -7,6 +7,7 @@ import {
   usStates,
   type UsState,
 } from "../../scripts/us-states";
+import { sitePath } from "../../scripts/site-path";
 
 export function getStaticPaths() {
   return usStates.map((state) => ({
@@ -62,6 +63,6 @@ const regionLabel = `${regionLabels[state.region]}（${state.region}）`;
         </p>
       )
     }
-    <p><a href="/states/">返回各州列表</a></p>
+    <p><a href={sitePath("/states/")}>返回各州列表</a></p>
   </article>
 </MainLayout>

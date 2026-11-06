@@ -1,4 +1,6 @@
 ---
+import { sitePath } from "../scripts/site-path";
+
 const year = new Date().getFullYear();
 ---
 
@@ -6,7 +8,7 @@ const year = new Date().getFullYear();
   <div class="site-footer-inner">
     <p>GeoWiki</p>
     <p>Explore the World, One Fact at a Time.</p>
-    <p><a href="/about/">關於本站</a></p>
+    <p><a href={sitePath("/about/")}>關於本站</a></p>
     <p>&copy; {year}</p>
   </div>
 </footer>

@@ -36,4 +36,4 @@ npm run preview
 
 ## Deployment
 
-The site is intended for GitHub Pages with Astro static output. Set `site` and `base` in `astro.config.mjs` to the repository URL before the first deployment. The GitHub Actions workflow is not included in this setup step.
+The site is deployed to GitHub Pages at https://b101113027.github.io/GeoWiki/. Pushing to `main` runs `.github/workflows/deploy.yml`. In the repository settings, set Pages source to GitHub Actions.
