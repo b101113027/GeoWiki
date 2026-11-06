@@ -1,0 +1,30 @@
+---
+interface Props {
+  name: string;
+  chineseName: string;
+  code: string;
+  capital: string;
+  regionLabel: string;
+  href: string;
+  hasArticle?: boolean;
+}
+
+const {
+  name,
+  chineseName,
+  code,
+  capital,
+  regionLabel,
+  href,
+  hasArticle = false,
+} = Astro.props;
+---
+
+<a class="state-card" href={href}>
+  <p class="state-card-code">{code}</p>
+  <h3>{chineseName}</h3>
+  <p>{name}</p>
+  <p>首府 {capital}</p>
+  <p>{regionLabel}</p>
+  {hasArticle && <span>閱讀文章</span>}
+</a>

@@ -1,0 +1,25 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  href: string;
+  linkLabel?: string;
+  heading?: "h2" | "h3";
+}
+
+const {
+  title,
+  description,
+  href,
+  linkLabel = "了解更多",
+  heading = "h3",
+} = Astro.props;
+
+const Heading = heading;
+---
+
+<a class="category-card" href={href}>
+  <Heading>{title}</Heading>
+  <p>{description}</p>
+  <span>{linkLabel}</span>
+</a>

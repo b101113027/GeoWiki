@@ -1,0 +1,101 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import CategoryCard from "../components/CategoryCard.astro";
+
+const entries = [
+  {
+    title: "世界地理探索",
+    description:
+      "從大陸、海洋、氣候到地形，沿著地理百科認識世界各地。",
+    href: "/encyclopedia/",
+    linkLabel: "進入地理百科",
+  },
+  {
+    title: "美國 50 州",
+    description: "查看五十州的名稱、簡稱、首府與地理區域。",
+    href: "/states/",
+    linkLabel: "查看各州",
+  },
+  {
+    title: "互動測驗",
+    description: "玩 50 States Challenge，在美國地圖上找出全部五十州。",
+    href: "/quiz/",
+    linkLabel: "開始測驗",
+  },
+];
+
+const featuredArticles = [
+  {
+    title: "七大洲",
+    description:
+      "地球陸地通常分為亞洲、非洲、北美洲、南美洲、南極洲、歐洲與大洋洲。",
+  },
+  {
+    title: "五大洋",
+    description: "太平洋、大西洋、印度洋、南冰洋與北冰洋連接世界各地的陸地。",
+  },
+  {
+    title: "赤道",
+    description: "赤道是緯度 0 度的緯線，把地球分為南半球與北半球。",
+  },
+  {
+    title: "本初子午線",
+    description: "本初子午線是經度 0 度的基準，通過英國格林威治。",
+  },
+  {
+    title: "喜馬拉雅山脈",
+    description: "喜馬拉雅山脈位於亞洲，是世界海拔最高的山脈。",
+  },
+  {
+    title: "尼羅河",
+    description:
+      "尼羅河是非洲的主要河流，流向一般是自南向北注入地中海。",
+  },
+];
+---
+
+<MainLayout
+  title="GeoWiki"
+  description="GeoWiki 是互動式地理百科，用文章、地圖與測驗探索世界與美國五十州。"
+>
+  <section class="hero">
+    <h1>GeoWiki</h1>
+    <p class="lead">Explore the World, One Fact at a Time.</p>
+    <p>
+      GeoWiki 是互動式地理百科，用文章、地圖與測驗幫助你認識世界各地，以及美國的五十個州。
+    </p>
+  </section>
+
+  <div class="card-grid home-entries">
+    {
+      entries.map((entry) => (
+        <CategoryCard
+          title={entry.title}
+          description={entry.description}
+          href={entry.href}
+          linkLabel={entry.linkLabel}
+          heading="h2"
+        />
+      ))
+    }
+  </div>
+
+  <section class="home-section" aria-labelledby="featured-title">
+    <h2 id="featured-title">精選百科文章</h2>
+    <p class="section-intro">
+      以下是地理百科中的基礎主題。個別文章頁尚未建立，這些卡片會先連到百科總覽。
+    </p>
+    <div class="card-grid">
+      {
+        featuredArticles.map((article) => (
+          <CategoryCard
+            title={article.title}
+            description={article.description}
+            href="/encyclopedia/"
+            linkLabel="前往百科"
+          />
+        ))
+      }
+    </div>
+  </section>
+</MainLayout>

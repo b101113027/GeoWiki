@@ -1,0 +1,67 @@
+---
+import { getCollection, render } from "astro:content";
+import MainLayout from "../../layouts/MainLayout.astro";
+import {
+  regionLabels,
+  stateSlug,
+  usStates,
+  type UsState,
+} from "../../scripts/us-states";
+
+export function getStaticPaths() {
+  return usStates.map((state) => ({
+    params: { slug: stateSlug(state.name) },
+    props: { state },
+  }));
+}
+
+interface Props {
+  state: UsState;
+}
+
+const { state } = Astro.props;
+const articles = await getCollection("states");
+const article = articles.find(
+  (entry) => entry.data.slug === stateSlug(state.name),
+);
+const rendered = article ? await render(article) : null;
+const Content = rendered?.Content;
+const regionLabel = `${regionLabels[state.region]}（${state.region}）`;
+---
+
+<MainLayout
+  title={`${state.chineseName}（${state.name}）`}
+  description={`${state.chineseName}的首府、縮寫、地理區域與百科介紹。`}
+>
+  <article class="state-article">
+    <p class="state-kicker">{regionLabel}</p>
+    <h1>{state.chineseName}</h1>
+    <p class="lead">{state.name}</p>
+    <dl class="state-facts">
+      <div>
+        <dt>縮寫</dt>
+        <dd>{state.code}</dd>
+      </div>
+      <div>
+        <dt>首府</dt>
+        <dd>{state.capital}</dd>
+      </div>
+      <div>
+        <dt>地理區域</dt>
+        <dd>{regionLabel}</dd>
+      </div>
+    </dl>
+    {
+      Content ? (
+        <div class="state-body">
+          <Content />
+        </div>
+      ) : (
+        <p class="section-intro">
+          這州的完整百科文章尚未撰寫。頁面上的縮寫、首府與區域來自共用的五十州資料，沒有另外編寫地理描述。
+        </p>
+      )
+    }
+    <p><a href="/states/">返回各州列表</a></p>
+  </article>
+</MainLayout>

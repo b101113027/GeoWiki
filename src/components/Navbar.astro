@@ -1,0 +1,35 @@
+---
+const links = [
+  { href: "/", label: "首頁" },
+  { href: "/encyclopedia/", label: "地理百科" },
+  { href: "/states/", label: "美國各州" },
+  { href: "/quiz/", label: "互動測驗" },
+  { href: "/about/", label: "關於" },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="/">GeoWiki</a>
+    <input class="nav-toggle" id="nav-toggle" type="checkbox" />
+    <label class="nav-toggle-label" for="nav-toggle">選單</label>
+    <nav class="site-nav" aria-label="主要">
+      <ul class="nav-list">
+        {
+          links.map((link) => (
+            <li>
+              <a
+                href={link.href}
+                aria-current={currentPath === link.href ? "page" : undefined}
+              >
+                {link.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</header>

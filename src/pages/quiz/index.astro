@@ -1,0 +1,106 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import UsMap from "../../components/UsMap.astro";
+---
+
+<MainLayout
+  title="50 States Challenge"
+  description="在沒有州名的美國地圖上點出題目指定的州，點錯要一直找到對的位置。"
+>
+  <div class="quiz-layout" data-quiz>
+    <div class="quiz-map-wrap">
+      <UsMap />
+      <p class="map-note">
+        阿拉斯加畫在左下角，並依原圖縮小；夏威夷在它的右側。地圖上不標州名，直接點你認為的位置。
+      </p>
+      <p class="map-credit">
+        州界來自
+        <a href="https://commons.wikimedia.org/wiki/File:Blank_US_Map_(states_only).svg"
+          >Wikimedia Commons 的空白美國地圖</a
+        >，CC0。
+      </p>
+    </div>
+
+    <section class="quiz-panel" aria-labelledby="quiz-title">
+      <h1 id="quiz-title">50 States Challenge</h1>
+      <p class="section-intro">
+        美國 50 州挑戰。畫面上會出現一個尚未完成的州，請在地圖上點出它的位置。點錯不會換題，要一直點到正確的州；點錯越多，正確率越低。
+      </p>
+
+      <div class="quiz-progress-block">
+        <p id="quiz-count">0 / 50</p>
+        <div
+          id="quiz-bar"
+          class="quiz-bar"
+          role="progressbar"
+          aria-label="完成進度"
+          aria-valuemin="0"
+          aria-valuemax="50"
+          aria-valuenow="0"
+        >
+          <span id="quiz-bar-fill"></span>
+        </div>
+      </div>
+
+      <div id="quiz-play">
+        <p class="quiz-label">目前題目</p>
+        <p id="quiz-prompt" class="quiz-prompt">
+          <span id="quiz-prompt-zh"></span>
+          <span id="quiz-prompt-en"></span>
+          <span id="quiz-prompt-code"></span>
+        </p>
+        <p id="quiz-feedback" class="quiz-feedback" aria-live="polite"></p>
+      </div>
+
+      <div id="quiz-done" class="quiz-done" hidden>
+        <h2>全部完成</h2>
+        <p id="quiz-done-summary"></p>
+      </div>
+    </section>
+
+    <div class="quiz-side">
+      <dl class="quiz-stats">
+        <div>
+          <dt>剩餘</dt>
+          <dd id="quiz-remaining">50</dd>
+        </div>
+        <div>
+          <dt>完成比例</dt>
+          <dd id="quiz-percent">0%</dd>
+        </div>
+        <div>
+          <dt>答對</dt>
+          <dd id="quiz-correct">0</dd>
+        </div>
+        <div>
+          <dt>答錯</dt>
+          <dd id="quiz-wrong">0</dd>
+        </div>
+        <div>
+          <dt>正確率</dt>
+          <dd id="quiz-accuracy">—</dd>
+        </div>
+        <div>
+          <dt>時間</dt>
+          <dd id="quiz-time">0:00</dd>
+        </div>
+      </dl>
+
+      <div class="quiz-legend">
+        <span><i class="swatch swatch-open"></i>未完成</span>
+        <span><i class="swatch swatch-done"></i>已完成</span>
+      </div>
+
+      <button id="quiz-restart" class="quiz-button quiz-button-secondary" type="button">
+        Restart
+      </button>
+    </div>
+  </div>
+</MainLayout>
+
+<script>
+  import { startStateQuiz } from "../../scripts/state-quiz";
+  import { usStates } from "../../scripts/us-states";
+
+  startStateQuiz(usStates);
+</script>

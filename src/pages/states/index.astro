@@ -1,0 +1,51 @@
+---
+import { getCollection } from "astro:content";
+import MainLayout from "../../layouts/MainLayout.astro";
+import StateCard from "../../components/StateCard.astro";
+import {
+  censusRegions,
+  regionLabels,
+  stateSlug,
+  usStates,
+} from "../../scripts/us-states";
+
+const articles = await getCollection("states");
+const articleSlugs = new Set(articles.map((article) => article.data.slug));
+const groups = censusRegions.map((region) => ({
+  region,
+  label: `${regionLabels[region]}（${region}）`,
+  states: usStates
+    .filter((state) => state.region === region)
+    .sort((a, b) => a.name.localeCompare(b.name)),
+}));
+---
+
+<MainLayout
+  title="美國各州"
+  description="美國五十州的名稱、縮寫、首府、地理區域，以及州介紹文章。"
+>
+  <h1>美國各州</h1>
+  <p class="section-intro">
+    以下列出全部 50 州。名稱、縮寫、首府與區域來自同一份資料。每州使用相同的介紹頁；目前已有完整文章的是加利福尼亞州、紐約州與德克薩斯州。
+  </p>
+  {
+    groups.map((group) => (
+      <section class="home-section" aria-labelledby={`region-${group.region}`}>
+        <h2 id={`region-${group.region}`}>{group.label}</h2>
+        <div class="card-grid">
+          {group.states.map((state) => (
+            <StateCard
+              name={state.name}
+              chineseName={state.chineseName}
+              code={state.code}
+              capital={state.capital}
+              regionLabel={group.label}
+              href={`/states/${stateSlug(state.name)}/`}
+              hasArticle={articleSlugs.has(stateSlug(state.name))}
+            />
+          ))}
+        </div>
+      </section>
+    ))
+  }
+</MainLayout>

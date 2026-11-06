@@ -1,0 +1,402 @@
+[
+  {
+    "name": "Alabama",
+    "chineseName": "阿拉巴馬州",
+    "code": "AL",
+    "capital": "Montgomery",
+    "aliases": ["Ala."],
+    "region": "South"
+  },
+  {
+    "name": "Alaska",
+    "chineseName": "阿拉斯加州",
+    "code": "AK",
+    "capital": "Juneau",
+    "aliases": ["Alas."],
+    "region": "West"
+  },
+  {
+    "name": "Arizona",
+    "chineseName": "亞利桑那州",
+    "code": "AZ",
+    "capital": "Phoenix",
+    "aliases": ["Ariz."],
+    "region": "West"
+  },
+  {
+    "name": "Arkansas",
+    "chineseName": "阿肯色州",
+    "code": "AR",
+    "capital": "Little Rock",
+    "aliases": ["Ark."],
+    "region": "South"
+  },
+  {
+    "name": "California",
+    "chineseName": "加利福尼亞州",
+    "code": "CA",
+    "capital": "Sacramento",
+    "aliases": ["Calif.", "加州"],
+    "region": "West"
+  },
+  {
+    "name": "Colorado",
+    "chineseName": "科羅拉多州",
+    "code": "CO",
+    "capital": "Denver",
+    "aliases": ["Colo."],
+    "region": "West"
+  },
+  {
+    "name": "Connecticut",
+    "chineseName": "康乃狄克州",
+    "code": "CT",
+    "capital": "Hartford",
+    "aliases": ["Conn."],
+    "region": "Northeast"
+  },
+  {
+    "name": "Delaware",
+    "chineseName": "德拉瓦州",
+    "code": "DE",
+    "capital": "Dover",
+    "aliases": ["Del."],
+    "region": "South"
+  },
+  {
+    "name": "Florida",
+    "chineseName": "佛羅里達州",
+    "code": "FL",
+    "capital": "Tallahassee",
+    "aliases": ["Fla.", "佛州"],
+    "region": "South"
+  },
+  {
+    "name": "Georgia",
+    "chineseName": "喬治亞州",
+    "code": "GA",
+    "capital": "Atlanta",
+    "aliases": ["Ga."],
+    "region": "South"
+  },
+  {
+    "name": "Hawaii",
+    "chineseName": "夏威夷州",
+    "code": "HI",
+    "capital": "Honolulu",
+    "aliases": [],
+    "region": "West"
+  },
+  {
+    "name": "Idaho",
+    "chineseName": "愛達荷州",
+    "code": "ID",
+    "capital": "Boise",
+    "aliases": [],
+    "region": "West"
+  },
+  {
+    "name": "Illinois",
+    "chineseName": "伊利諾州",
+    "code": "IL",
+    "capital": "Springfield",
+    "aliases": ["Ill.", "伊州"],
+    "region": "Midwest"
+  },
+  {
+    "name": "Indiana",
+    "chineseName": "印第安納州",
+    "code": "IN",
+    "capital": "Indianapolis",
+    "aliases": ["Ind."],
+    "region": "Midwest"
+  },
+  {
+    "name": "Iowa",
+    "chineseName": "愛荷華州",
+    "code": "IA",
+    "capital": "Des Moines",
+    "aliases": [],
+    "region": "Midwest"
+  },
+  {
+    "name": "Kansas",
+    "chineseName": "堪薩斯州",
+    "code": "KS",
+    "capital": "Topeka",
+    "aliases": ["Kans."],
+    "region": "Midwest"
+  },
+  {
+    "name": "Kentucky",
+    "chineseName": "肯塔基州",
+    "code": "KY",
+    "capital": "Frankfort",
+    "aliases": ["Ky."],
+    "region": "South"
+  },
+  {
+    "name": "Louisiana",
+    "chineseName": "路易斯安那州",
+    "code": "LA",
+    "capital": "Baton Rouge",
+    "aliases": ["La."],
+    "region": "South"
+  },
+  {
+    "name": "Maine",
+    "chineseName": "緬因州",
+    "code": "ME",
+    "capital": "Augusta",
+    "aliases": [],
+    "region": "Northeast"
+  },
+  {
+    "name": "Maryland",
+    "chineseName": "馬里蘭州",
+    "code": "MD",
+    "capital": "Annapolis",
+    "aliases": ["Md."],
+    "region": "South"
+  },
+  {
+    "name": "Massachusetts",
+    "chineseName": "麻薩諸塞州",
+    "code": "MA",
+    "capital": "Boston",
+    "aliases": ["Mass.", "麻州"],
+    "region": "Northeast"
+  },
+  {
+    "name": "Michigan",
+    "chineseName": "密西根州",
+    "code": "MI",
+    "capital": "Lansing",
+    "aliases": ["Mich."],
+    "region": "Midwest"
+  },
+  {
+    "name": "Minnesota",
+    "chineseName": "明尼蘇達州",
+    "code": "MN",
+    "capital": "Saint Paul",
+    "aliases": ["Minn."],
+    "region": "Midwest"
+  },
+  {
+    "name": "Mississippi",
+    "chineseName": "密西西比州",
+    "code": "MS",
+    "capital": "Jackson",
+    "aliases": ["Miss."],
+    "region": "South"
+  },
+  {
+    "name": "Missouri",
+    "chineseName": "密蘇里州",
+    "code": "MO",
+    "capital": "Jefferson City",
+    "aliases": ["Mo."],
+    "region": "Midwest"
+  },
+  {
+    "name": "Montana",
+    "chineseName": "蒙大拿州",
+    "code": "MT",
+    "capital": "Helena",
+    "aliases": ["Mont."],
+    "region": "West"
+  },
+  {
+    "name": "Nebraska",
+    "chineseName": "內布拉斯加州",
+    "code": "NE",
+    "capital": "Lincoln",
+    "aliases": ["Nebr."],
+    "region": "Midwest"
+  },
+  {
+    "name": "Nevada",
+    "chineseName": "內華達州",
+    "code": "NV",
+    "capital": "Carson City",
+    "aliases": ["Nev."],
+    "region": "West"
+  },
+  {
+    "name": "New Hampshire",
+    "chineseName": "新罕布夏州",
+    "code": "NH",
+    "capital": "Concord",
+    "aliases": ["N.H."],
+    "region": "Northeast"
+  },
+  {
+    "name": "New Jersey",
+    "chineseName": "新澤西州",
+    "code": "NJ",
+    "capital": "Trenton",
+    "aliases": ["N.J."],
+    "region": "Northeast"
+  },
+  {
+    "name": "New Mexico",
+    "chineseName": "新墨西哥州",
+    "code": "NM",
+    "capital": "Santa Fe",
+    "aliases": ["N.M."],
+    "region": "West"
+  },
+  {
+    "name": "New York",
+    "chineseName": "紐約州",
+    "code": "NY",
+    "capital": "Albany",
+    "aliases": ["N.Y."],
+    "region": "Northeast"
+  },
+  {
+    "name": "North Carolina",
+    "chineseName": "北卡羅來納州",
+    "code": "NC",
+    "capital": "Raleigh",
+    "aliases": ["N.C."],
+    "region": "South"
+  },
+  {
+    "name": "North Dakota",
+    "chineseName": "北達科他州",
+    "code": "ND",
+    "capital": "Bismarck",
+    "aliases": ["N.D."],
+    "region": "Midwest"
+  },
+  {
+    "name": "Ohio",
+    "chineseName": "俄亥俄州",
+    "code": "OH",
+    "capital": "Columbus",
+    "aliases": [],
+    "region": "Midwest"
+  },
+  {
+    "name": "Oklahoma",
+    "chineseName": "奧克拉荷馬州",
+    "code": "OK",
+    "capital": "Oklahoma City",
+    "aliases": ["Okla."],
+    "region": "South"
+  },
+  {
+    "name": "Oregon",
+    "chineseName": "奧勒岡州",
+    "code": "OR",
+    "capital": "Salem",
+    "aliases": ["Ore."],
+    "region": "West"
+  },
+  {
+    "name": "Pennsylvania",
+    "chineseName": "賓夕法尼亞州",
+    "code": "PA",
+    "capital": "Harrisburg",
+    "aliases": ["Pa.", "Penn.", "賓州"],
+    "region": "Northeast"
+  },
+  {
+    "name": "Rhode Island",
+    "chineseName": "羅德島州",
+    "code": "RI",
+    "capital": "Providence",
+    "aliases": ["R.I."],
+    "region": "Northeast"
+  },
+  {
+    "name": "South Carolina",
+    "chineseName": "南卡羅來納州",
+    "code": "SC",
+    "capital": "Columbia",
+    "aliases": ["S.C."],
+    "region": "South"
+  },
+  {
+    "name": "South Dakota",
+    "chineseName": "南達科他州",
+    "code": "SD",
+    "capital": "Pierre",
+    "aliases": ["S.D."],
+    "region": "Midwest"
+  },
+  {
+    "name": "Tennessee",
+    "chineseName": "田納西州",
+    "code": "TN",
+    "capital": "Nashville",
+    "aliases": ["Tenn."],
+    "region": "South"
+  },
+  {
+    "name": "Texas",
+    "chineseName": "德克薩斯州",
+    "code": "TX",
+    "capital": "Austin",
+    "aliases": ["Tex.", "德州"],
+    "region": "South"
+  },
+  {
+    "name": "Utah",
+    "chineseName": "猶他州",
+    "code": "UT",
+    "capital": "Salt Lake City",
+    "aliases": [],
+    "region": "West"
+  },
+  {
+    "name": "Vermont",
+    "chineseName": "佛蒙特州",
+    "code": "VT",
+    "capital": "Montpelier",
+    "aliases": ["Vt."],
+    "region": "Northeast"
+  },
+  {
+    "name": "Virginia",
+    "chineseName": "維吉尼亞州",
+    "code": "VA",
+    "capital": "Richmond",
+    "aliases": ["Va."],
+    "region": "South"
+  },
+  {
+    "name": "Washington",
+    "chineseName": "華盛頓州",
+    "code": "WA",
+    "capital": "Olympia",
+    "aliases": ["Wash."],
+    "region": "West"
+  },
+  {
+    "name": "West Virginia",
+    "chineseName": "西維吉尼亞州",
+    "code": "WV",
+    "capital": "Charleston",
+    "aliases": ["W. Va."],
+    "region": "South"
+  },
+  {
+    "name": "Wisconsin",
+    "chineseName": "威斯康辛州",
+    "code": "WI",
+    "capital": "Madison",
+    "aliases": ["Wis."],
+    "region": "Midwest"
+  },
+  {
+    "name": "Wyoming",
+    "chineseName": "懷俄明州",
+    "code": "WY",
+    "capital": "Cheyenne",
+    "aliases": ["Wyo."],
+    "region": "West"
+  }
+]
